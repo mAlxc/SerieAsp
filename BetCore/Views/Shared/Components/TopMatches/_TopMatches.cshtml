@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Match>
+
+<h3>TOP des matchs</h3>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-2">
+                    @item.Team1
+                </div>
+                <div class="col-md-2">
+                    <a asp-controller="Bets" asp-action="create"
+                       asp-route-idMatch="@item.ID" asp-route-typeBet="Team1"
+                       class="btn btn-default">@item.OddTeam1</a>
+                </div>
+                <div class="col-md-2">
+                    <a asp-controller="Bets" asp-action="create"
+                       asp-route-idMatch="@item.ID" asp-route-typeBet="Team1"
+                       class="btn btn-default">@item.OddDraw</a>
+                </div>
+                <div class="col-md-2">
+                    <a asp-controller="Bets" asp-action="create"
+                       asp-route-idMatch="@item.ID" asp-route-typeBet="Team1"
+                       class="btn btn-default">@item.OddTeam2</a>
+                </div>
+                <div class="col-md-2">
+                    @item.Team2
+                </div>
+            </div>
+            
+
+        </div>
+    }
+</div>

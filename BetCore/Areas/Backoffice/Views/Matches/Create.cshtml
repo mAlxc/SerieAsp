@@ -1,0 +1,49 @@
+﻿@model BetCoreModels.Models.Match
+
+@{
+    ViewData["Title"] = "Ajout d'un match";
+}
+
+<h2>Créer un match</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Team1" class="control-label"></label>
+                <input asp-for="Team1" class="form-control" />
+                <span asp-validation-for="Team1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Team2" class="control-label"></label>
+                <input asp-for="Team2" class="form-control" />
+                <span asp-validation-for="Team2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OddTeam1" class="control-label"></label>
+                <input asp-for="OddTeam1" class="form-control" />
+                <span asp-validation-for="OddTeam1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OddTeam2" class="control-label"></label>
+                <input asp-for="OddTeam2" class="form-control" />
+                <span asp-validation-for="OddTeam2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OddDraw" class="control-label"></label>
+                <input asp-for="OddDraw" class="form-control" />
+                <span asp-validation-for="OddDraw" class="text-danger"></span>
+            </div>
+           
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,16 @@
+﻿
+@{
+    Layout = "_Layout";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">@RenderSection("TitleForm", true)</div>
+    <div class="panel-body">@RenderBody()</div>
+</div>
+
+@section SectionScripts{
+    <script src="~/js/jquery.validate.min.js"></script>
+    <script src="~/js/jquery.validate.unobtrusive.min.js"></script>
+    @RenderSection("SectionScripts", false)
+}
+
